@@ -1,0 +1,476 @@
+<!--Created by Hugo Fief -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>QuizGameCoderBeginner</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+    <div class="card card-primary card-inverse text-center">
+        <div class="card-block">
+            <div>
+                <p class="card-title display-3">Let's Go !!!
+                </p>
+            </div>
+        </div>
+
+    </div>  
+    <br><br>  
+
+        <div class="text-left">
+
+             <!--Result output container-->
+            <div id="results" class="text-primary display-1"></div>
+      
+
+            <!--Question section using form element-->
+                <form name="csQuizForm" onsubmit="return submitAnswers()">
+                    
+                <div class="text-left"><!--opening of div tag-->
+    
+          <!--Question 1-->
+                    <h3 class="body-font">1) Quels sont les paramètres d'un For ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q1" value="a" id="q1a" class="display-5 mx-1">a. Une initialisation,
+         instruction
+                </label>
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q1" value="b" id="q1b" class="display-5 mx-1">b. Une initialisation,
+          instruction,
+          incrémentation
+                </label>
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q1" value="c"  id="q1c" class="display-5 mx-1">c. La boucle For ne contient aucun paramètre
+                </label>
+    
+                    <br><br>
+    
+                <!--Question 2-->
+                    <h3 class=" body-font">2) Dans quel cas est-il utile d'utiliser un For ?</h3>
+                <label class="cursor"    >
+                    <input type="radio" name="q2" value="a" id="q2a" class="display-5 mx-1">a. Si on ne connait pas le nombre de répétitions
+                </label>
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q2" value="b" id="q2b" class="display-5 mx-1">b. Si on connait le nombre de répétitions
+                </label>
+    
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q2" value="c"  id="q2c" class="display-5 mx-1">c. Si on veut réparer un programme
+                </label>
+                
+                    <br><br>
+    
+                 <!--Question 3-->
+                    <h3 class=" body-font">3) Quel est la particularité du do while ?</h3>        
+                <label class="cursor">
+                    <input type="radio" name="q3" value="a" id="q3a" class="display-5 mx-1">a. Fait pareil que le while
+                </label>
+                                                
+                    <br>
+    
+                <label class="cursor" >
+                    <input type="radio" name="q3" value="b" id="q3b" class="display-5 mx-1">b. S'incrémente toute seule
+                </label>               
+                     
+                    <br>
+    
+                <label class="cursor">
+                    <input type="radio" name="q3" value="c" id="q3c" class="display-5 mx-1">c. Exécute la boucle au moins 1 fois
+                </label>
+                    <br><br>
+    
+    
+                <!--Question 4-->
+                    <h3 class=" body-font">4) quel fonction pour calculer le carré d'un chiffre ?</h3>
+                <label class="cursor">        
+                    <input type="radio" name="q4" value="a" id="q4a" class="display-5 mx-1">a. sqrt
+                </label>
+                    <br>
+    
+                <label class="cursor">
+                    <input type="radio" name="q4" value="b" id="q4b" class="display-5 mx-1">b. ceil
+                </label>
+    
+                    <br>
+                
+                <label class="cursor">
+                    <input type="radio" name="q4" value="c"  id="q4c" class="display-5 mx-1">c. pow
+                </label>
+                    
+                
+                <br><br>
+    
+    
+                <!--Question 5-->
+                    <h3 class="body-font">5) Quel est l'utilité de extern ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q5" value="a" id="q5a" class="display-5 mx-1">a. Mesurer la taille d'un fichier externe
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q5" value="b" id="q5b" class="display-5 mx-1">b. Utiliser une fonction dans un fichier externe au programme
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q5" value="c"   id="q5c" class="display-5 mx-1">c. Mettre son projet dans un fichier externe
+                </label>   
+                 
+     <br><br>
+     
+    <!--Question 6-->
+     <h3 class="body-font">6) Qu'est ce qu'une variable statique ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q6" value="a" id="q6a" class="display-5 mx-1">a. Une variable qui ne change pas
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q6" value="b" id="q6b" class="display-5 mx-1">b. Variable qui est propre à la fonction dans lequel elle à été déclaré
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q6" value="c"   id="q6c" class="display-5 mx-1">c. Peut être apeller partout dans le code
+                </label>
+            
+             <br><br>   
+                                    
+          <!--Question 7-->
+     <h3 class="body-font">7) Quel sont les 2 charactères propres aux pointeurs ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q7" value="a" id="q7a" class="display-5 mx-1">a. * et ?
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q7" value="b" id="q7b" class="display-5 mx-1">b. % et !
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q7" value="c"   id="q7c" class="display-5 mx-1">c. * et &
+                </label>  
+                
+                 <br><br>
+                 
+         <!--Question 8-->
+     <h3 class="body-font">8) que signifie void ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q8" value="a" id="q8a" class="display-5 mx-1">a. Fonction qui retourne rien et qui ne prend rien en paramètre
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q8" value="b" id="q8b" class="display-5 mx-1">b. Fonction qui retourne rien
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q8" value="c"   id="q8c" class="display-5 mx-1">c. Fonction qui ne peut être apeller qu'une fois
+                </label>  
+                
+                 <br><br>
+                
+           <!--Question 9-->
+     <h3 class="body-font">9) Quel est la bonne écriture ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q9" value="a" id="q9a" class="display-5 mx-1">a. justDoIt
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q9" value="b" id="q9b" class="display-5 mx-1">b. just_do_it
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q9" value="c"   id="q9c" class="display-5 mx-1">c. justdoit
+                </label>  
+                
+                 <br><br>
+                
+           <!--Question 10-->
+     <h3 class="body-font">10) Qu'est ce qu'on doit mettre pour indiquer la fin d'un tableau unidimensionnelle ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q10" value="a" id="q10a" class="display-5 mx-1">a. /0
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q10" value="b" id="q10b" class="display-5 mx-1">b. \n
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q10" value="c"   id="q10c" class="display-5 mx-1">c. \0
+               </label>  
+               
+                <br><br>
+               
+               <!--Question 11-->
+     <h3 class="body-font">11) Quels sont les types de données correctes ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q11" value="a" id="q11a" class="display-5 mx-1">a. int,short,long,char,float,double
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q11" value="b" id="q11b" class="display-5 mx-1">b. int short float double
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q11" value="c"   id="q11c" class="display-5 mx-1">c. int short long float
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 12-->
+     <h3 class="body-font">12) Que permet de faire unsigned ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q12" value="a" id="q12a" class="display-5 mx-1">a. Permet de déclarer des variables non signés
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q12" value="b" id="q12b" class="display-5 mx-1">b. Se débarasser des valeurs négatives afin de doubler sa taille 
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q12" value="c"   id="q12c" class="display-5 mx-1">c. Permet d'assigner automatiquement 0 à une variable
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 13-->
+     <h3 class="body-font">13) Quel est le bon format pour un int ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q13" value="a" id="q13a" class="display-5 mx-1">a. %lf             
+                     </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q13" value="b" id="q13b" class="display-5 mx-1">b. %s
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q13" value="c"   id="q13c" class="display-5 mx-1">c. %d
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 14-->
+     <h3 class="body-font">14) Quel est le mot clé pour mesurer la taille d'un tableau de char ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q14" value="a" id="q14a" class="display-5 mx-1">a. strlength
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q14" value="b" id="q14b" class="display-5 mx-1">b. stringlen
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q14" value="c"   id="q14c" class="display-5 mx-1">c. strlen
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 15-->
+     <h3 class="body-font">15) Quel est la bibliothèque pour manipuler des chaines de charactères ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q15" value="a" id="q15a" class="display-5 mx-1">a. stdlib.h
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q15" value="b" id="q15b" class="display-5 mx-1">b. string.h
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q15" value="c"   id="q15c" class="display-5 mx-1">c. stdio.h
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 16-->
+     <h3 class="body-font">16) Qu'est ce qu'un double ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q16" value="a" id="q16a" class="display-5 mx-1">a. Type de données pour nombre décimaux à double précisions
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q16" value="b" id="q16b" class="display-5 mx-1">b. Type de données pour nombre décimaux à simple précisions
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q16" value="c"   id="q16c" class="display-5 mx-1">c. Type de données pour nombre négatifs
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 17-->
+     <h3 class="body-font">17) Quel fonction permet de lire plusieurs chaines de charactères et qui permet de controller l'overflow ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q17" value="a" id="q17a" class="display-5 mx-1">a. scanf
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q17" value="b" id="q17b" class="display-5 mx-1">b. gets
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q17" value="c"   id="q17c" class="display-5 mx-1">c. fgets
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 18-->
+     <h3 class="body-font">18) Comment fait-on pour vérifier si une valeur est paire ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q18" value="a" id="q18a" class="display-5 mx-1">a. if (i ! 2 != 0)
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q18" value="b" id="q18b" class="display-5 mx-1">b. if (i / 2 == 0)
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q18" value="c"   id="q18c" class="display-5 mx-1">c. if( i % 2 == 0)
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 19-->
+     <h3 class="body-font">19) Comment vérifie t-on une égalité dans un if ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q19" value="a" id="q19a" class="display-5 mx-1">a. =
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q19" value="b" id="q19b" class="display-5 mx-1">b. !=
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q19" value="c"   id="q19c" class="display-5 mx-1">c. ==
+                </label>  
+                
+                 <br><br>
+                 
+                 <!--Question 20-->
+     <h3 class="body-font">20) Donner les 2 autres manières pour écrire i = i + 1 ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q20" value="a" id="q20a" class="display-5 mx-1">a. i=+1 et i++
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q20" value="b" id="q20b" class="display-5 mx-1">b. i+=1 et i++
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q20" value="c"   id="q20c" class="display-5  mx-1">c. i!=1 et i!!
+                </label>  
+                
+                 <br><br>
+                
+                 
+                </div><!--close of //div classs "text-left"-->
+    
+                
+                    
+  <!--Submit button element-->
+                <button class="btn btn-lg btn-outline-primary myLink" 
+                style="float: left;width: 12.5em;">Clique ici pour Valider</button>
+    
+                </form><!--close of form element-->
+        
+                    <br>
+                        <button class="reset btn btn-lg btn-outline-primary myLink2"
+                        style="float: left;width: 12.5em;">
+                            Clique ici pour Rejouer
+                        </button>
+                    <br/><br/>
+                    
+                <!--Footer-->
+                    <footer class="text-center" id="b-text">
+                        
+                        <br><br><p style="float: left;width: 15.5em;"><kbd>Fief Hugo <br/> Tous droits réservés |
+<br/> Copyright 2018</kbd></p>
+                    </footer>
+                
+            </div><!-- // closing tag for parent div -->
+            <br><br><br>
+        
+       
+        
+    
+        </div>
+
+
+
+</body>
+</html>

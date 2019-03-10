@@ -1,0 +1,269 @@
+<!--Created by Hugo Fief -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>QuizGameCoderBeginner</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+    <div class="card card-primary card-inverse text-center">
+        <div class="card-block">
+            <div>
+                <p class="card-title display-3">Let's Go !!!
+                </p>
+            </div>
+        </div>
+
+    </div>  
+    <br><br>  
+
+        <div class="text-left">
+
+             <!--Result output container-->
+            <div id="results" class="text-primary display-1"></div>
+      
+
+            <!--Question section using form element-->
+                <form name="csQuizForm" onsubmit="return submitAnswers()">
+                    
+                <div class="text-left"><!--opening of div tag-->
+    
+          <!--Question 1-->
+                    <h3 class="body-font">1) Que signifie l'abréviation HTML ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q1" value="a" id="q1a" class="display-5 mx-1">a. HiperText Markup Langage 
+                </label>
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q1" value="b" id="q1b" class="display-5 mx-1">b.  HyperText Markup Language 
+                </label>
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q1" value="c"  id="q1c" class="display-5 mx-1">c. Hyper Test Markup Language
+                </label>
+    
+                    <br><br>
+    
+                <!--Question 2-->
+                    <h3 class=" body-font">2) Que signifie l'abréviation CSS ?</h3>
+                <label class="cursor"    >
+                    <input type="radio" name="q2" value="a" id="q2a" class="display-5 mx-1">a. Coucouding Style Sheets
+                </label>
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q2" value="b" id="q2b" class="display-5 mx-1">b. Cascading Style Sheets
+                </label>
+    
+                <br>
+                <label class="cursor">
+                    <input type="radio" name="q2" value="c"  id="q2c" class="display-5 mx-1">c. Cascading Style Shets
+                </label>
+                
+                    <br><br>
+    
+                 <!--Question 3-->
+                    <h3 class=" body-font">3) Quel est le raccourci qui permet d'ouvrir l'outil de développement ?</h3>        
+                <label class="cursor">
+                    <input type="radio" name="q3" value="a" id="q3a" class="display-5 mx-1">a. alt F4
+                </label>
+                                                
+                    <br>
+    
+                <label class="cursor" >
+                    <input type="radio" name="q3" value="b" id="q3b" class="display-5 mx-1">b. F5
+                </label>               
+                     
+                    <br>
+    
+                <label class="cursor">
+                    <input type="radio" name="q3" value="c" id="q3c" class="display-5 mx-1">c. F12
+                </label>
+                    <br><br>
+    
+    
+                <!--Question 4-->
+                    <h3 class=" body-font">4) En quel langage de programmation l'éditeur de texte sublime text à été créé ?</h3>
+                <label class="cursor">        
+                    <input type="radio" name="q4" value="a" id="q4a" class="display-5 mx-1">a.  C++
+                </label>
+                    <br>
+    
+                <label class="cursor">
+                    <input type="radio" name="q4" value="b" id="q4b" class="display-5 mx-1">b. Java
+                </label>
+    
+                    <br>
+                
+                <label class="cursor">
+                    <input type="radio" name="q4" value="c"  id="q4c" class="display-5 mx-1">c. Python
+                </label>
+                    
+                
+                <br><br>
+    
+    
+                <!--Question 5-->
+                    <h3 class="body-font">5) Que signifie l'abréviation www ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q5" value="a" id="q5a" class="display-5 mx-1">a. World Warcraft Web
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q5" value="b" id="q5b" class="display-5 mx-1">b. World Wide Web
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q5" value="c"   id="q5c" class="display-5 mx-1">c. War Warcraft Web
+                </label>   
+                 
+     <br><br>
+     
+    <!--Question 6-->
+     <h3 class="body-font">6) Quel est le raccourci le plus rapide pour ouvrir un lien dans un nouvel onglet ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q6" value="a" id="q6a" class="display-5 mx-1">a.  Clic Droit
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q6" value="b" id="q6b" class="display-5 mx-1">b. clic avec la molette de la souris
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q6" value="c"   id="q6c" class="display-5 mx-1">c. Regarder le ciel
+                </label>
+            
+             <br><br>   
+                                    
+          <!--Question 7-->
+     <h3 class="body-font">7) Quel est le navigateur qui possède l'outil de développement le plus développé ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q7" value="a" id="q7a" class="display-5 mx-1">a.  Google Chrome
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q7" value="b" id="q7b" class="display-5 mx-1">b. Microsoft Edge
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q7" value="c"   id="q7c" class="display-5 mx-1">c. Mozilla Firefox
+                </label>  
+                
+                 <br><br>
+                 
+         <!--Question 8-->
+     <h3 class="body-font">8) Quels sont les 2 manières différentes de déclarer un/des commentaires ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q8" value="a" id="q8a" class="display-5 mx-1">a.  // */ /*
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q8" value="b" id="q8b" class="display-5 mx-1">b. // /* */
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q8" value="c"   id="q8c" class="display-5 mx-1">c. /\ /* */
+                </label>  
+                
+                 <br><br>
+                
+           <!--Question 9-->
+     <h3 class="body-font">9) Quel est la norme de W3C qui doît être déclarer au tout début du code ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q9" value="a" id="q9a" class="display-5 mx-1">a. html lang="fr"
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q9" value="b" id="q9b" class="display-5 mx-1">b. DOCTYPE html
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q9" value="c"   id="q9c" class="display-5 mx-1">c. doctype html
+                </label>  
+                
+                 <br><br>
+                
+           <!--Question 10-->
+     <h3 class="body-font">10) Quel est l'attribut de la balise img qui permet d'améliorer son référencement et qui aide les malvoyants ?</h3>
+                <label class="cursor">
+                    <input type="radio" name="q10" value="a" id="q10a" class="display-5 mx-1">a.  media
+                </label>
+                
+                     <br>
+                    
+                <label class="cursor">
+                    <input type="radio" name="q10" value="b" id="q10b" class="display-5 mx-1">b. target=_blank
+                </label>
+    
+                     <br>
+                     
+                <label class="cursor">
+                    <input type="radio" name="q10" value="c"   id="q10c" class="display-5 mx-1">c. alt
+                </label>  
+                 
+                </div><!--close of //div classs "text-left"-->
+    
+                <br><br>
+                    
+  <!--Submit button element-->
+                <button class="btn btn-lg btn-outline-primary myLink" 
+                style="float: left;width: 24em;">Click ici pour Valider</button>
+    
+                </form><!--close of form element-->
+        
+                    <br>
+                        <button class="reset btn btn-lg btn-outline-primary myLink2"
+                        style="float: left;width: 24em;">
+                            Clique ici pour Rejouer
+                        </button>
+                    <br/><br/>
+                    
+                <!--Footer-->
+                    <footer class="text-center" id="b-text">
+                        
+                        <br><br><p style="float: left;width: 30em;"><kbd>Fief Hugo | Tous droits réservés | Copyright 2018</kbd></p>
+                    </footer>
+                
+            </div><!-- // closing tag for parent div -->
+            <br><br><br>
+        
+       
+        
+    
+        </div>
+
+
+
+</body>
+</html>
