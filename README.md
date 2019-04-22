@@ -1,9 +1,19 @@
-*** Copyright by Hugo Fief ***
-- Le projet est composé de 2 fichiers avec un quiz sur le langage C et un autre sur le web en général
-- Ouvrez les 2 fichiers et faites les 2 quiz, je vous met au défi de faire un sans faute pour les 2
+# PROJET DE QUIZ POUR TESTER SES COMPETENCES
 
---- Autre Utilisation ---
-- Si vous trouvez que le site est trop moche c'est parce qu'il à été fait sur l'éditeur en ligne sololearn
-- créer vous un compte sur sololearn
-- Créer un nouveau projet et mettez le code des 3 fichiers pour les 2 quiz 
-- Exécutez le en clickant sur run et vous verez qu'il est beacoup plus stylé
+## ***Developed by Hugo Fief***
+
+```
+Arborescence du Projet :
+â”œâ”€â”€â”€quiz_1 : quiz sur le html,css
+â””â”€â”€â”€quiz_2 : quiz sur le langage c
+```
+---
+
+- Le projet est composÃ© de 2 fichiers avec un quiz sur le langage C et un autre sur le web en gÃ©nÃ©ral
+- Ouvrez les 2 fichiers et faites les 2 quiz, je vous met au dÃ©fi de faire un sans faute pour les 2
+
+### ---Autre Utilisation---
+- Si vous trouvez que le site est trop moche c'est parce qu'il Ã  Ã©tÃ© fait sur l'Ã©diteur en ligne sololearn
+- crÃ©er vous un compte sur sololearn
+- CrÃ©er un nouveau projet et mettez le code des 3 fichiers pour les 2 quiz 
+- ExÃ©cutez le en clickant sur run et vous verez qu'il est beacoup plus stylÃ©
